@@ -24,4 +24,6 @@ Browse to your localhost (ie: [http://localhost:3000](http://localhost:3000)) in
 
 Missing from the demo:
 ----------------------
-Handling of IE and/or older browsers using XHR instead of EventSource
++ Handling of IE and/or older browsers using XHR instead of EventSource
++ Proper error handling
++ Tests

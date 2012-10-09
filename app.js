@@ -36,7 +36,7 @@ app.get('/events', function(req, res) {
 	//clear interval when the client stops listening
 	res.on('close', function() {
 		clearInterval(interval);
-		console.log("stopped");
+		console.log("Client stopped listening");
 	});
 
 	//send a message containing current time and data (random number) every 3 seconds
