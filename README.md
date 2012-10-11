@@ -19,8 +19,11 @@ Once npm is installed, you can checkout the source and install the missing modul
 	$ npm install
 	$ node app
 
-Browse to your localhost (ie: [http://localhost:3000](http://localhost:3000)) in your web browser.
+Now, browse to your localhost (ie: [http://localhost:3000](http://localhost:3000)) in your web browser.
 
+Online demo
+-----------
+An online demo is available on Heroku at [http://express-eventsource.herokuapp.com/](http://express-eventsource.herokuapp.com/)
 
 Missing from the demo:
 ----------------------
