@@ -26,6 +26,14 @@ An online demo is available on Heroku at [http://express-eventsource.herokuapp.c
 
 Missing from the demo:
 ----------------------
-+ Handling of IE and/or older browsers using XHR instead of EventSource
 + Proper error handling
-+ Tests
++ TestsSupport for IE
+
+--------------
+Since IE (at least up to version 9) does not support EventSource, Im trying to use XHR to replace it.
+I found this [https://github.com/remy/polyfills/blob/master/EventSource.js](polyfill by Remy), and that forced some changes to the code:
+1. The event name and the way it's added
+2. Response headers
+3. An additional 2k padding at the top of the header - apparently necessary
+
+Right now, it still doesn't work in IE - I'll update the repo when I find a solution. 

@@ -34,7 +34,9 @@ app.get('/events', function(req, res) {
       'Cache-Control': 'no-cache',
       'Connection': 'keep-alive'
     });
-	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
+    
+    //the following 2 lines were added for IE support: 2kb padding, and a retry param
+	res.write(':' + Array(2049).join(' ') + '\n');
 	res.write('retry: 2000\n');
 
 	//clear interval when the client stops listening
