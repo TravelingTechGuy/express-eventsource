@@ -1,5 +1,5 @@
 $(function() {
-	if (!!window.EventSource) {
+	// if (!!window.EventSource) {
 		//create a new event source
 	  	var source = new EventSource("/events");
 	  	//listen for data
@@ -23,8 +23,8 @@ $(function() {
 	  			$("#content").append("<b>Error occured</b><br />");
 		  	}
 		}, false);
-	}
-	else {
+	// }
+	// else {
 	  	// Result to xhr polling :(
-	}
+	// }
 });

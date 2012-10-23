@@ -9,7 +9,6 @@ This simple demo shows streaming events from server to client.
 
 Install
 -------
-
 You may need to install some missing modules with npm. http://npmjs.org/
 
 Once npm is installed, you can checkout the source and install the missing modules:
