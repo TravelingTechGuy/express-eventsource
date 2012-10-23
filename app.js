@@ -35,6 +35,7 @@ app.get('/events', function(req, res) {
       'Connection': 'keep-alive'
     });
 	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
+	res.write('retry: 2000\n');
 
 	//clear interval when the client stops listening
 	res.on('close', function() {
