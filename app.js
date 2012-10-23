@@ -29,10 +29,14 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/events', function(req, res) {
 	//prepare header
-	res.header('Content-Type', 'text/event-stream');
-	res.header('Cache-Control', 'no-cache');
-	res.header('Connection', 'keep-alive');
-
+	res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive',
+      'Access-Control-Allow-Origin': '*'
+    });
+	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
+	
 	//clear interval when the client stops listening
 	res.on('close', function() {
 		clearInterval(interval);
@@ -63,9 +67,7 @@ app.get('/events', function(req, res) {
 	  	console.log(data);
 
 	  	//send message back
-	  	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
-    	res.write('retry: 2000\n');
-	  	res.write('id: ' + counter + '\n');
+    	res.write('id: ' + counter + '\n');
 	  	res.write('event: data\n');
 	  	res.write('data: ' + data + '\n\n');
 	}, 3000);
