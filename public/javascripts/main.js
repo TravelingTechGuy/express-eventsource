@@ -25,7 +25,7 @@ $(function() {
   	source.addEventListener('data', displayData, false);
 
   	//listen for data on IE, listening for the 'message' event
-  	source.addEventListener('message', displayData, false);
+  	source.onmessage = displayData;
 
   	//listen for error
   	source.addEventListener('error', displayError, false);
