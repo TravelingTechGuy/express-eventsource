@@ -25,10 +25,10 @@ $(function() {
   	source.addEventListener('data', displayData, false);
 
   	//listen for data on IE, listening for the 'message' event
-  	source.onmessage = displayData;
+  	source.onmessage = function (event) {
+	  	console.log('msg: ' + event.data);
+	};
 
   	//listen for error
   	source.addEventListener('error', displayError, false);
-
-	
 });
