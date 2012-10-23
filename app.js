@@ -63,6 +63,8 @@ app.get('/events', function(req, res) {
 	  	console.log(data);
 
 	  	//send message back
+	  	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
+    	res.write('retry: 2000\n');
 	  	res.write('id: ' + counter + '\n');
 	  	res.write('event: data\n');
 	  	res.write('data: ' + data + '\n\n');
