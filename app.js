@@ -32,11 +32,10 @@ app.get('/events', function(req, res) {
 	res.writeHead(200, {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive',
-      'Access-Control-Allow-Origin': '*'
+      'Connection': 'keep-alive'
     });
 	res.write(':' + Array(2049).join(' ') + '\n'); //2kb padding for IE
-	
+
 	//clear interval when the client stops listening
 	res.on('close', function() {
 		clearInterval(interval);
@@ -50,7 +49,7 @@ app.get('/events', function(req, res) {
 		//data object to be returned
 	  	var data = {
 			id: counter,
-			data: Math.floor(Math.random()*1000000).toString(),
+			data: Math.floor(Math.random() * 1000000).toString(),
 			time: (new Date()).toLocaleTimeString(),
 			final: false
 	  	};
