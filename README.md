@@ -27,7 +27,8 @@ An online demo is available on Heroku at [http://express-eventsource.herokuapp.c
 Missing from the demo:
 ----------------------
 + Proper error handling
-+ TestsSupport for IE
++ Tests
++ Support for IE
 
 --------------
 Since IE (at least up to version 9) does not support EventSource, I'm trying to use XHR to replace it.
