@@ -8,7 +8,7 @@ $(function() {
   		}
   		//output the data and timestamp
   		$("#content").append(data.time + "&nbsp;&mdash;&nbsp;" + data.data + "<br />");
-  	};
+   };
 
   	var displayError = function(e) {
 		if (e.readyState == EventSource.CLOSED) {
