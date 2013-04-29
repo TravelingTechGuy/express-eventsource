@@ -6,8 +6,8 @@
     "start": "node app"
   },
   "engines": {
-    "node": "*",
-    "npm":  "*"
+    "node": "0.x",
+    "npm":  "1.x"
   },
   "dependencies": {
     "express": "3.x",
