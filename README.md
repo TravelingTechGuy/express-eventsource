@@ -1,7 +1,7 @@
 Server Side Events using Node, Express and EventSource
 ======================================================
 
-This simple demo shows streaming events from server to client.
+This simple demo shows streaming events from server to client, using EventSource.
 
 * The server ([app.js](https://github.com/TravelingTechGuy/express-eventsource/blob/master/app.js)) streams a list of 10 random numbers, one every 3 seconds, or until the client stops listening.
 * The client ([main.js](https://github.com/TravelingTechGuy/express-eventsource/blob/master/public/javascripts/main.js)) listens to the stream, prints the results and stops listening after the last number has been received.
@@ -9,9 +9,9 @@ This simple demo shows streaming events from server to client.
 
 Install
 -------
-You may need to install some missing modules with npm. http://npmjs.org/
+You may need to install some missing modules with [npm](http://npmjs.org/)
 
-Once npm is installed, you can checkout the source and install the missing modules:
+Once node and npm are installed, you can checkout the source and install the missing modules:
 
 	$ git clone https://github.com/TravelingTechGuy/express-eventsource.git
 	$ cd ./express-eventsource
@@ -28,14 +28,30 @@ Missing from the demo:
 ----------------------
 + Proper error handling
 + Tests
-+ Support for IE
++ Support for IE (in progress - read on)
 
---------------
-Since IE (at least up to version 9) does not support EventSource, I'm trying to use XHR to replace it.
-I found this [polyfill by Remy](https://github.com/remy/polyfills/blob/master/EventSource.js), and that forced some changes to the code:
+
+IE Support
+----------
+Since IE (at least up to version 9) does not support EventSource, I'm trying to use this [polyfill by Yaffle](https://github.com/Yaffle/EventSource).
+I've used Modernizr to bootstrap it when needed (and found out I need to bootstrap the test into Modernizr :) ).
+It requires some server-side changes:
 
 1. The event name and the way it's added
 2. Response headers
 3. An additional 2k padding at the top of the header - apparently necessary
 
 Right now, it still doesn't work in IE - I'll update the repo when I find a solution. 
+
+Ingredients
+-----------
+###Client side:
+
++ [http://www.jquery.com](jQuery)
++ [https://github.com/Yaffle/EventSource](EventSource polyfill) by Yaffle
++ [http://modernizr.com](Modernizr) - bootstrapping the polyfill (could do it in one line, but was included in Boilerplate)
++ [http://html5boilerplate.com/](HTML5 bolierplate) and [http://codepen.io/jkempff/pen/Iimhb](Ju Kempff) - CSS
+                
+###Server side:</h2>
++ [http://www.nodejs.org](Node.js)
++ [http://expressjs.com/](Express)
