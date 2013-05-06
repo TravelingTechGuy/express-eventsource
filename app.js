@@ -32,7 +32,8 @@ app.get('/events', function(req, res) {
 	res.writeHead(200, {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive'
+      'Connection': 'keep-alive',
+      'Access-Control-Allow-Origin': '*'
     });
     
     //the following 2 lines were added for IE support: 2kb padding, and a retry param
@@ -58,12 +59,13 @@ app.get('/events', function(req, res) {
 	  	};
 
 	  	//after 10 messages, send final message and zero the counter
-	  	if(counter > 10) {
+	  	if (counter > 10) {
 			clearInterval(interval);
 			data.final = true;
 			data.data = "the end";
 			counter = 0;
 	  	}
+	  	
 	  	//convert message to string
 	  	data = JSON.stringify(data);
 	  	console.log(data);
