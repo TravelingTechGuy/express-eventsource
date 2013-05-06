@@ -46,12 +46,12 @@ Right now, it still doesn't work in IE - I'll update the repo when I find a solu
 Ingredients
 -----------
 ###Client side:
-
 + [http://www.jquery.com](jQuery)
 + [https://github.com/Yaffle/EventSource](EventSource polyfill) by Yaffle
 + [http://modernizr.com](Modernizr) - bootstrapping the polyfill (could do it in one line, but was included in Boilerplate)
-+ [http://html5boilerplate.com/](HTML5 bolierplate) and [http://codepen.io/jkempff/pen/Iimhb](Ju Kempff) - CSS
++ [http://html5boilerplate.com/](HTML5 Bolierplate)
++ [http://codepen.io/jkempff/pen/Iimhb](Wrapidify) by Ju Kempff
                 
-###Server side:</h2>
+###Server side:
 + [http://www.nodejs.org](Node.js)
 + [http://expressjs.com/](Express)

@@ -3,59 +3,60 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="SSE demo">
-        <meta name="viewport" content="width=device-width">
-        <title><%= title %></title>
-        <link rel="stylesheet" href="/stylesheets/normalize.min.css">
-        <link rel="stylesheet" href="/stylesheets/main.css">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="SSE demo">
+		<meta name="viewport" content="width=device-width">
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/stylesheets/normalize.min.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
 
-        <script src="/javascripts/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <div id="wrapidy">
-            <h1><span>Server Side Events (EventSource) demo</span></h1>
-            <p>
-                This simple demo shows streaming events from server to client, using EventSource.<br />
-                The server (app.js) sends a list of 10 random numbers, one every 3 seconds, or until the client stops listening.<br />
-                The client (main.js) listens to the stream, prints the results and stops listening after the last number has been received.<br /><br />
-                Read more about EventSource at <a href="http://www.w3.org/TR/eventsource/" target="_blank">W3.org</a>
-            </p>
-            <p>
-                <a href="https://github.com/TravelingTechGuy/express-eventsource">
-                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
-                </a>
-            </p>
-            <h1><span>The demo</span></h1>
-            <!-- this will be filled with server side event responsed -->
-            <div id="content"></div>
-            <a href="javascript:location.reload();" class="button">Restart demo</a><br />
-            <h1><span>The ingredients</span></h1>
-            <p>
-                <h2>Client side:</h2>
-                <ul>
-                    <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
-                    <li><a href="https://github.com/Yaffle/EventSource" target="_blank">EventSource polyfill</a> by Yaffle</li>
-                    <li><a href="http://modernizr.com" target="_blank">Modernizr</a> - bootstrapping the polyfill (could do it in one line, but was included in Boilerplate)</li>
-                    <li><a href="http://html5boilerplate.com/" target="_blank">HTML5 bolierplate</a> and <a href="http://codepen.io/jkempff/pen/Iimhb" target="_blank">Ju Kempff</a> - CSS</li>
-                </ul>
-                <h2>Server side:</h2>
-                <ul>
-                    <li><a href="http://www.nodejs.org" target="_blank">Node.js</a></li>
-                    <li><a href="http://expressjs.com/" target="_blank">Express</a></li>
-                </ul>
-            </p>
-            <h1><span>Credits</span></h1>
-            <p>
-                The source can be forked at <a href="https://github.com/TravelingTechGuy/express-eventsource">GitHub</a><br />
-                Developed by Guy Vider - <a href="http://www.travelingtechguy.com" target="_blank">Traveling Tech Guy</a>
-            </p>
-        </div>
+		<script src="/javascripts/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapidy">
+			<h1><span>Server Side Events (EventSource) demo</span></h1>
+			<p>
+				This simple demo shows streaming events from server to client, using EventSource.<br />
+				The server (app.js) sends a list of 10 random numbers, one every 3 seconds, or until the client stops listening.<br />
+				The client (main.js) listens to the stream, prints the results and stops listening after the last number has been received.<br /><br />
+				Learn more about EventSource at <a href="http://www.w3.org/TR/eventsource/" target="_blank">W3.org</a>
+			</p>
+			<p>
+				<a href="https://github.com/TravelingTechGuy/express-eventsource">
+					<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+				</a>
+			</p>
+			<h1><span>The demo</span></h1>
+			<!-- this will be filled with server side event responsed -->
+			<div id="content"></div>
+			<a href="javascript:location.reload();" class="button">Restart demo</a><br />
+			<h1><span>The ingredients</span></h1>
+			<p>
+				<h2>Client side:</h2>
+				<ul>
+					<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+					<li><a href="https://github.com/Yaffle/EventSource" target="_blank">EventSource polyfill</a> by Yaffle</li>
+					<li><a href="http://modernizr.com" target="_blank">Modernizr</a> - bootstrapping the polyfill (could have been done in one line, but it was included in Boilerplate)</li>
+					<li><a href="http://html5boilerplate.com/" target="_blank">HTML5 Bolierplate</a></li>
+					<li><a href="http://codepen.io/jkempff/pen/Iimhb" target="_blank">Wrapidify</a> by Ju Kempff</li>
+				</ul>
+				<h2>Server side:</h2>
+				<ul>
+					<li><a href="http://www.nodejs.org" target="_blank">Node.js</a></li>
+					<li><a href="http://expressjs.com/" target="_blank">Express</a></li>
+				</ul>
+			</p>
+			<h1><span>Credits</span></h1>
+			<p>
+				The source can be forked at <a href="https://github.com/TravelingTechGuy/express-eventsource">GitHub</a><br />
+				Developed by Guy Vider - <a href="http://www.travelingtechguy.com" target="_blank">Traveling Tech Guy</a>
+			</p>
+		</div><!-- end wrapidify -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/javascripts/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="/javascripts/main.js"></script>
-    </body>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/javascripts/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="/javascripts/main.js"></script>
+	</body>
 </html>
