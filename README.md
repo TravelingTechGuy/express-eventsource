@@ -30,10 +30,9 @@ Missing from the demo:
 + Tests
 + Support for IE (in progress - read on)
 
-
 IE Support
 ----------
-Since IE (at least up to version 9) does not support EventSource, I'm trying to use this [polyfill by Yaffle](https://github.com/Yaffle/EventSource).
+Since IE (at least up to version 9) does not support EventSource, I'm using this [polyfill by Yaffle](https://github.com/Yaffle/EventSource).
 I've used Modernizr to bootstrap it when needed (and found out I need to bootstrap the test into Modernizr :) ).
 It requires some server-side changes:
 
@@ -41,17 +40,15 @@ It requires some server-side changes:
 2. Response headers
 3. An additional 2k padding at the top of the header - apparently necessary
 
-Right now, it still doesn't work in IE - I'll update the repo when I find a solution. 
-
 Ingredients
 -----------
 ###Client side:
-+ [http://www.jquery.com](jQuery)
-+ [https://github.com/Yaffle/EventSource](EventSource polyfill) by Yaffle
-+ [http://modernizr.com](Modernizr) - bootstrapping the polyfill (could do it in one line, but was included in Boilerplate)
-+ [http://html5boilerplate.com/](HTML5 Bolierplate)
-+ [http://codepen.io/jkempff/pen/Iimhb](Wrapidify) by Ju Kempff
++ [jQuery](http://www.jquery.com)
++ [EventSource polyfill](https://github.com/Yaffle/EventSource) by Yaffle
++ [Modernizr](http://modernizr.com) - bootstrapping the polyfill
++ [HTML5 Bolierplate](http://html5boilerplate.com/)
++ [Wrapidify](http://codepen.io/jkempff/pen/Iimhb) by Ju Kempff - page design
                 
 ###Server side:
-+ [http://www.nodejs.org](Node.js)
-+ [http://expressjs.com/](Express)
++ [Node.js](http://www.nodejs.org)
++ [Express](http://expressjs.com/)
