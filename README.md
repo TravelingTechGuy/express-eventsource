@@ -28,7 +28,7 @@ Missing from the demo:
 ----------------------
 + Proper error handling
 + Tests
-+ Support for IE (in progress - read on)
++ Grunt project
 
 IE Support
 ----------
