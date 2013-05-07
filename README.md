@@ -23,7 +23,7 @@ Now, browse to your localhost (ie: [http://localhost:3000](http://localhost:3000
 Online demo
 -----------
 An online demo is available on Heroku at [http://express-eventsource.herokuapp.com/](http://express-eventsource.herokuapp.com/)
-[Demo screenshot](http://i.imgur.com/p7W5Lk7.png)
+![Demo screenshot](http://i.imgur.com/p7W5Lk7.png "Demo screenshot")
 
 Missing from the demo:
 ----------------------
