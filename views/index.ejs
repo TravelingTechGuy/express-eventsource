@@ -15,6 +15,9 @@
 		<script src="/javascripts/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
+		<a href="https://github.com/TravelingTechGuy/express-eventsource">
+			<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
+		</a>
 		<div id="wrapidy">
 			<h1><span>Server Side Events (EventSource) demo</span></h1>
 			<p>
@@ -23,18 +26,15 @@
 				The client (main.js) listens to the stream, prints the results and stops listening after the last number has been received.<br /><br />
 				Learn more about EventSource at <a href="http://www.w3.org/TR/eventsource/" target="_blank">W3.org</a>
 			</p>
-			<p>
-				<a href="https://github.com/TravelingTechGuy/express-eventsource">
-					<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub">
-				</a>
-			</p>
+			
 			<h1><span>The demo</span></h1>
+				<p>	
+				<!-- this will be filled with server side event responsed -->
+				<div id="content"></div>
+				<!-- end content -->
+				<a href="javascript:location.reload();" class="button">Restart demo</a><br />
+			</p>
 			
-			<!-- this will be filled with server side event responsed -->
-			<div id="content"></div>
-			<!-- end content -->
-			
-			<a href="javascript:location.reload();" class="button">Restart demo</a><br />
 			<h1><span>The ingredients</span></h1>
 			<p>
 				<h2>Client side:</h2>
@@ -51,6 +51,7 @@
 					<li><a href="http://expressjs.com/" target="_blank">Express</a></li>
 				</ul>
 			</p>
+			
 			<h1><span>Credits</span></h1>
 			<p>
 				The source can be forked at <a href="https://github.com/TravelingTechGuy/express-eventsource">GitHub</a><br />
