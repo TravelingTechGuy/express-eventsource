@@ -46,8 +46,7 @@ $(function() {
 	//bootstrap pollyfill if browser doesn't support EventSource
 	Modernizr.load({
 		test: Modernizr.eventsource,
-		nope: '/javascripts/vendor/eventsource.js'
+		nope: '/javascripts/vendor/eventsource.js',
+		complete: startListening
 	});
-
-	startListening();
 });
