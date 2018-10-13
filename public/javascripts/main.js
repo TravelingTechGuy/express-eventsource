@@ -4,7 +4,7 @@ $(function() {
 	var source;
 
 	var displayData = function(e) {
-		//parse thge JSON message
+		//parse the JSON message
 		var data = JSON.parse(e.data);
 		//if it's the last message, stop listening
 		if (data.final) {
@@ -19,7 +19,7 @@ $(function() {
 			$('#content').append('<strong>Connection was closed.</strong><br />');
 		}
 		else {
-			$('#content').append('<strong>Error occured</strong><br />');
+			$('#content').append('<strong>Error occurred</strong><br />');
 		}
 	};
 
